@@ -158,6 +158,8 @@ def create_file_for_flag_3():
     copied_blocks_int = copy.deepcopy(blocks_int)
 
     # XXX: Your code here; transform the blocks here
+    for x in range(6):
+        copied_blocks_int[6][x + 3] ^= ord("superb"[x]) ^ ord("boring"[x])
 
     # in case you used blocks_int
     bytestring = convert_int_blocks_to_bytestring(copied_blocks_int)
