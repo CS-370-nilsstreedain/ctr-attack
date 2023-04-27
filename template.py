@@ -111,6 +111,9 @@ def create_file_for_flag_1():
     copied_blocks_int = copy.deepcopy(blocks_int)
 
     # XXX: Your code here; transform the blocks here
+    copied_blocks_int[1][15] ^= 1
+    for x in range(5):
+        copied_blocks_int[1][x + 11] ^= x + 1
 
     # in case you used blocks_int
     bytestring = convert_int_blocks_to_bytestring(copied_blocks_int)
