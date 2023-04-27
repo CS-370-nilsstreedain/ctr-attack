@@ -131,6 +131,9 @@ def create_file_for_flag_2():
     copied_blocks_int = copy.deepcopy(blocks_int)
 
     # XXX: Your code here; transform the blocks here
+    is_admin = [3, 1, 3, 3, 7]
+    for x in range(5):
+        copied_blocks_int[7][x + 11] ^= is_admin[x]
 
     # in case you used blocks_int
     bytestring = convert_int_blocks_to_bytestring(copied_blocks_int)
